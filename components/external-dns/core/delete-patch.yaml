@@ -1,0 +1,4 @@
+$patch: delete
+kind: dummy
+metadata:
+  name: dummy
