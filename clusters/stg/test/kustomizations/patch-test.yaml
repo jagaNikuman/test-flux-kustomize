@@ -5,7 +5,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/stg/test/patch-test
+  # path: ./clusters/stg/test/patch-test
+  path: ./base/patch-test
   prune: true
   sourceRef:
     kind: GitRepository
