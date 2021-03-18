@@ -4,13 +4,13 @@ namespace: external-dns
 resources:
 - ../sources/external-dns-0.7.3
 - namespace.yaml
-# patches:
-# - path: delete-patch.yaml
-#   target:
-#     kind: Deployment
-# - path: delete-patch.yaml
-#   target:
-#     kind: ClusterRoleBinding
-# - path: delete-patch.yaml
-#   target:
-#     kind: ServiceAccount
+patches:
+- path: delete-patch.yaml
+  target:
+    kind: Deployment
+- path: delete-patch.yaml
+  target:
+    kind: ClusterRoleBinding
+- path: delete-patch.yaml
+  target:
+    kind: ServiceAccount
