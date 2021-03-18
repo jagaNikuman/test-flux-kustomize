@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: external-dns
 resources:
 - namespace.yaml
-- ../sources/external-dns-0.7.3/
+- ../../sources/external-dns-0.7.3/
 # patches:
 # - path: delete-patch.yaml
 #   target:
