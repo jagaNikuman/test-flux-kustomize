@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./components/external-dns/build-target
+  path: ./clusters/stg/test/external-dns
   prune: true
   sourceRef:
     kind: GitRepository
