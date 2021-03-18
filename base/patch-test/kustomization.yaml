@@ -4,5 +4,5 @@ namespace: patch-test
 resources:
 - namespace.yaml
 - deployment.yaml
-# patchesStrategicMerge:
-# - delete-patch.yaml
+patchesStrategicMerge:
+- delete-patch.yaml
