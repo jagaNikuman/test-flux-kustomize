@@ -4,7 +4,5 @@ namespace: patch-test
 resources:
 - namespace.yaml
 - deployment.yaml
-patches:
-- path: delete-patch.yaml
-  target:
-    kind: Deployment
+patchesStrategicMerge:
+- delete-patch.yaml
