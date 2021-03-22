@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: external-dns
+spec:
+  template:
+    spec:
+      containers:
+      - name: external-dns
+        args:
+        - --namespace=istio-system
+        - --google-project=aosihfaosihfaslfhjsakhf
+        - --domain-filter=hoge.example.local
+        - --txt-owner-id=hoge
+        - --source=ingress
+        - --provider=google
+        - --policy=sync
+        - --registry=txt
+        - --interval=1m
+        - --events
+        - --log-format=json
+        - --log-level=info

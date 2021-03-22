@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: external-dns
+resources:
+- ../sources/external-dns-0.7.3/tenant
+patchesStrategicMerge:
+- deployment-args-patch.yaml

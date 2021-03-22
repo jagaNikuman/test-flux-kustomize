@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: external-dns
+spec:
+  template:
+    spec:
+      containers:
+      - name: external-dns
+        args:
+        - --namespace=istio-system
+        - --google-project=gpn-platform-base
+        - --domain-filter=test.example.local
+        - --txt-owner-id=test
+        - --source=ingress
+        - --provider=google
+        - --policy=sync
+        - --registry=txt
+        - --interval=1m
+        - --events
+        - --log-format=json
+        - --log-level=info
