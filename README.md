@@ -1,1 +1,1 @@
-# test-flux-kustomize
+# test-flux-kustom
